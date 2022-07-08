@@ -13,7 +13,7 @@ public class OnlinerTest extends WebDriverSettings {
 
                  driver.findElement(By.xpath("//span[contains(text(), 'Электроника')] ")).click();
 
-        driver.findElement(By.xpath("//*[text()=\"Телевизоры\"]")).click();
+        driver.findElement(By.xpath("//*[text()='Телевизоры']")).click();
 
         JavascriptExecutor jse = (JavascriptExecutor)driver;
         jse.executeScript("window.scrollBy(0,250)", "");
@@ -21,8 +21,7 @@ public class OnlinerTest extends WebDriverSettings {
                driver.findElement(By.xpath("//span[contains(text(), 'LG')] ")).click();
 Thread.sleep(1000);
 
-                  Assert.assertFalse(driver.findElement(By.xpath("//span[contains(text(), 'телевизор LG')] "))
-                          .getText().equals("Телевизор Samsung"));
-        System.out.println("Телевизоры Samsung не найдены");
+ driver.findElement(By.xpath("//span[contains(text(), 'Телевизор Samsung')]" ));
+
         }
     }
