@@ -3,10 +3,7 @@ import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.NoSuchElementException;
-import org.openqa.selenium.WebElement;
 
-import java.sql.DriverManager;
-import java.util.concurrent.TimeUnit;
 
 public class OnlinerTest extends WebDriverSettings {
     By samsungLocator = By.xpath("//span[contains(text(), 'Телевизор Samsung')]");
@@ -32,6 +29,7 @@ public class OnlinerTest extends WebDriverSettings {
         try {
             driver.findElement(samsungLocator).isDisplayed();
         } catch (NoSuchElementException e) {
+            System.out.println("Телевизор Samsung не найден");
         }
         return false;
 
