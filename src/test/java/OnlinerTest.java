@@ -26,13 +26,12 @@ public class OnlinerTest extends WebDriverSettings {
     }
 
     public boolean samsungNotDisplayed() {
-    try {
-        driver.findElement(samsungLocator).isDisplayed();
-    }
-    catch (NoSuchElementException e) {
-        System.out.println("Телевизор Samsung не найден");
-    }
-    return false;
+        try {
+            driver.findElement(samsungLocator).isDisplayed();
+        } catch (NoSuchElementException e) {
+            System.out.println("Телевизор Samsung не найден");
+        }
+        return false;
 
-}
+    }
 }
